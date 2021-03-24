@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+<div id="corpo">
+     <h1>Iniciando meu estudo com DOM</h1>
+
+    <p>Este curso é muito louco!</p>
+    <p>Juro que eu nunca vi igual!</p>
+    <div>Clique aqui em mim</div>
+    <p>Obrigado por visitar minha página!</p>
+    <script>
+        var p1 = window.document.getElementsByTagName('div')[1]
+        window.document.write('Está escrito assim: ' + p1.innerText)
+    </script>
+    <br>
+    <a href="../index.html"><input type="submit" value="Voltar"></a>
+</div>
+</body>
+</html>
