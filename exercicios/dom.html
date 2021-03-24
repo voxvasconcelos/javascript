@@ -4,22 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primeiros Passos com DOM</title>
+    <title>Dom Exercicio 01</title>
     <link rel="stylesheet" href="../estilo.css">
 </head>
 <body>
 <div id="corpo">
+    
      <h1>Iniciando meu estudo com DOM</h1>
 
-    <p>Este curso é muito louco!</p>
-    <p>Juro que eu nunca vi igual!</p>
-    <div>Clique aqui em mim</div>
-    <p>Obrigado por visitar minha página!</p>
+    <p>Raianne</p>    
+    <p>Werner</p>    
+    <p>Raimunda</p>
+    <p><strong>Deny</strong> Lobato</p>
+    <hr>
     <script>
-        var p1 = window.document.getElementsByTagName('div')[1]
-        window.document.write('Está escrito assim: ' + p1.innerText)
+        // Declando as variáveis
+        var nome1 = window.document.getElementsByTagName('p')[0]
+        var nome2 = window.document.getElementsByTagName('p')[1]
+        
+        // Escrevendo na tela
+        document.write(nome1.innerText + ' e ' + nome2.innerText + ' se amam.')
+
+        // Alterando variáveis já estabelecidas no HTML
+        nome1.innerText = ('Raianne Lobato')
+        nome2.innerText = ('Werner Vasconcelos')
+
+        
     </script>
-    <br>
+    
+    <br><br>
     <a href="../index.html"><input type="submit" value="Voltar"></a>
 </div>
 </body>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Exercicio 04</title>
+    <link rel="stylesheet" href="../estilo.css">
+    <style>
+        div#resul{
+            margin-top: 20px;
+        }
+
+        input.form{
+            width: 80px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<div id="corpo">
+     <h1>Somando Números</h1>
+
+        <!-- Criando um mini formulário-->
+        <input class="form" type="number" name="num1" id="num1">
+        +
+        <input class="form" type="number" name="num2" id="num2">
+        <input class="form" type="submit" value="Somar" onclick="somar()">
+
+        <!-- Mostrando o resultado -->
+        <div id="resul">Resultado: </div>
+        <script>
+            function somar(){
+                // Coletando os dados do formulário
+                var val1 = window.document.getElementById('num1')
+                var val2 = window.document.getElementById('num2')
+
+                // Tratando os dados do formulário
+                var n1 = Number(val1.value)
+                var n2 = Number(val2.value)
+
+                // Somando os dados
+                var s = n1 + n2
+
+                // Mostrando o resultado da soma
+                var res = window.document.getElementById('resul')
+                res.innerHTML = `Resultado: <strong>${s}</strong>`
+            }
+        </script>
+ 
+    
+    <br><br>
+    <a href="../index.html"><input type="submit" value="Voltar"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Exercicio 03</title>
+    <link rel="stylesheet" href="../estilo.css">
+    <style>
+        div#cubinho{
+            background: chocolate;
+            width: 150px;
+            height: 150px;
+            color: white;
+            line-height: 150px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="corpo">
+     <h1>Disparando evento pelo JS</h1>
+
+    <div id="cubinho">
+        Interaja...
+    </div>
+
+    <script>
+        // Definindo a variável universal
+        var a = window.document.getElementById('cubinho')
+
+        // Criando listas de eventos
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        /* EVENTOS */
+        function clicar(){
+            a.innerText = ('Clicou!')
+            a.style.background = 'purple'
+        }
+        function entrar(){
+            a.innerText = ('Entrou!')
+        }
+        function sair(){
+            a.innerText = ('Saiu!')
+            a.style.background = "chocolate"
+        }
+    </script>
+    
+    <br><br>
+    <a href="../index.html"><input type="submit" value="Voltar"></a>
+</div>
+</body>
+</html>
